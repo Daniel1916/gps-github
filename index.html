@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b57d0">
+  <meta name="description" content="Captura autorizada de localização e envio de TXT ao GitHub">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>GPS para GitHub</title>
+</head>
+<body>
+  <main class="card">
+    <header><span class="pin">●</span><div><h1>GPS para GitHub</h1><p>PWA instalável para Android</p></div></header>
+
+    <section class="notice">A localização só é capturada após seu toque e somente é enviada depois da sua confirmação.</section>
+
+    <section class="settings">
+      <label for="apiUrl">Endereço HTTPS do Worker</label>
+      <input id="apiUrl" type="url" inputmode="url" placeholder="https://seu-worker.workers.dev" autocomplete="url">
+      <label for="appKey">Chave de acesso do aplicativo</label>
+      <input id="appKey" type="password" placeholder="Informe a chave do Worker" autocomplete="off">
+      <small>O endereço fica salvo neste aparelho. A chave permanece apenas até fechar o navegador.</small>
+    </section>
+
+    <section id="result" class="result" aria-live="polite">
+      <span class="muted">Nenhuma localização obtida.</span>
+    </section>
+
+    <button id="locate" class="primary">Obter localização atual</button>
+    <button id="send" disabled>Enviar TXT para o GitHub</button>
+    <button id="install" class="link" hidden>Instalar aplicativo</button>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

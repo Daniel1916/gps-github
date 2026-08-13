@@ -1,0 +1,11 @@
+{
+  "name":"GPS para GitHub",
+  "short_name":"GPS GitHub",
+  "description":"Captura autorizada de coordenadas e envio de TXT ao GitHub",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#eef3fb",
+  "theme_color":"#0b57d0",
+  "icons":[{"src":"icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
